@@ -36,6 +36,7 @@ $Relative\ risk = {Incidence\ risk\ among\ an\ exposed\ group \over Incidence\ r
 
 
 ## Logistic Regression
+To compare the classification done with the relative risk per quartile/category, a logistic regression was implemented in Python. This algorithm considered the same variables as in the previous section.
 
 ## Results
 ### Confusion Matrix
