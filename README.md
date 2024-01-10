@@ -37,9 +37,9 @@ As these variables are correlated, later in the project it was determined if it 
 ### Null values
 The original tables contained 7199 null values in the `last_month_salary` column and 943 in the `number_dependents` column. Once it was determined that the null values were randomly located, the K-Nearest Neighbors (KNN) algorithm was used to predict and impute those missing values.
 
-![image](https://github.com/karlarochaes/credit-score-relative-risk/assets/88100992/94786f27-d05d-4acf-bb51-2e619a0064d6)
+![image](https://github.com/karlarochaes/credit-score-relative-risk/assets/88100992/61168e46-a218-4e0b-9b5d-3952a14bad1f)
 
-![image](https://github.com/karlarochaes/credit-score-relative-risk/assets/88100992/e7c00b68-9911-4155-9f0d-89e65cf08e33)
+![image](https://github.com/karlarochaes/credit-score-relative-risk/assets/88100992/ee7a6d36-921e-4a80-8427-8dfb734a5ec7)
 
 ### Outliers
 The outliers were handled capping the outliers to the maximum value using the IQR range:
