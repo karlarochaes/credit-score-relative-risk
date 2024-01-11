@@ -104,6 +104,7 @@ To compare the classification done with the relative risk per quartile/category,
 
 ## Results
 ### Relative Risk Model
+![image](https://github.com/karlarochaes/credit-score-relative-risk/assets/88100992/0b7e9ad5-94b3-4f55-86bc-ec28a628b7ee)
 
 ### Logistic Regression Model
 
