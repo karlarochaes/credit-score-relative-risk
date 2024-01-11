@@ -18,7 +18,7 @@ The "Super Caja" bank is facing an increasing amount of credit requests. In this
 
 ## Tools
 - SQL (Google BigQuery)
-- Python ([Google Colab](link))
+- Python (Google Colab)
 - Looker Studio
 
 ## Data Cleaning
@@ -109,6 +109,7 @@ To compare the classification done with the relative risk per quartile/category,
 ### Logistic Regression Model
 
 ## Visualization
+The final dashboard can be consulted in [this link](https://lookerstudio.google.com/reporting/29b10b35-77d0-4287-b4b4-f7400f0e3ff6).
 
 ## Conclusions and Recommendations
 
