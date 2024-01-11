@@ -4,7 +4,7 @@
 
 ---
 
-## Tabla of Contents
+## Table of Contents
 - [Introduction](#introduction)
 - [Tools](#tools)
 - [Data Cleaning](#data-cleaning)
