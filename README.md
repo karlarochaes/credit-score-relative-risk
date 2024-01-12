@@ -63,7 +63,7 @@ The relative risk was calculated as follows:
 
 $Relative\ risk = {Incidence\ risk\ among\ an\ exposed\ group \over Incidence\ risk\ among\ a\ non-exposed\ group}$
 
-||Disease (case)|No disease (control)|Total|
+||Event (case)|No event (control)|Total|
 |--------|--------|--------|--------|
 |Exposed|a|b|a+b|
 |Non-exposed|c|d|c+d|
@@ -74,7 +74,7 @@ In the context of this project, the exposure factors were the user variables (ag
 
 ||default_flag=1|default_flag=0|Total|
 |--------|--------|--------|--------|
-|Q1(21-41 years)|311|8764|9075|
+|Q1 (21-41 years)|311|8764|9075|
 |Q2, Q3, Q4 (other age ranges)|372|26553|26925|
 
 $Relative\ risk = {311/9075 \over 372/26925} = {0.034 \over 0.013} = 2.48$  
@@ -87,7 +87,15 @@ The corresponding calculus was estimated for each quartile or category and for e
 The relative risk values were transformed to binary values (dummy variables) using the following criteria:
 - 1 if the relative risk was higher than 1.4
 - 0 if the relative risk was equal to or lower than 1.4
-None of the `debt_ratio` quartiles had a relative risk value higher than 1.5, so this variable was discarded.
+
+None of the `debt_ratio` quartiles had a relative risk value higher than 1.4, so this variable was discarded.
+
+### Logistic Regression Model
+To compare the classification done with the relative risk per quartile/category, a logistic regression was implemented in Python. This algorithm considered the same variables as in the previous section, including the `debt_ratio` column. The training set was composed of 80% of the data and the test set included the 20% remaining.
+
+## Results
+### Relative Risk Model
+To find the best cutoff point to classify bad payers and good payers, the model was evaluated using ML metrics and the confusion matrix.
 
 As some variables had higher relative risk values than others, their punctuation was weighted in this manner:
 - `age`: 1 point.
@@ -99,12 +107,9 @@ As some variables had higher relative risk values than others, their punctuation
 
 Accordingly, the possible scores ranged between 0 and 9.
 
-### Logistic Regression Model
-To compare the classification done with the relative risk per quartile/category, a logistic regression was implemented in Python. This algorithm considered the same variables as in the previous section, including the `debt_ratio` column. The training set was composed of 80% of the data and the test set included the 20% remaining.
-
-## Results
-### Relative Risk Model
 ![image](https://github.com/karlarochaes/credit-score-relative-risk/assets/88100992/0b7e9ad5-94b3-4f55-86bc-ec28a628b7ee)
+
+With a cutoff point of 5 (any user with a score equal to or higher than 5 is classified as bad payer) corresponds to this confusion matrix.
 
 ### Logistic Regression Model
 
