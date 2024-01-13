@@ -85,10 +85,10 @@ The corresponding calculus was estimated for each quartile or category and for e
 
 #### Credit Score
 The relative risk values were transformed to binary values (dummy variables) using the following criteria:
-- 1 if the relative risk was higher than 1.4
-- 0 if the relative risk was equal to or lower than 1.4
+- 1 if the relative risk was higher than 1.5
+- 0 if the relative risk was equal to or lower than 1.5
 
-None of the `debt_ratio` quartiles had a relative risk value higher than 1.4, so this variable was discarded.
+None of the `debt_ratio` quartiles had a relative risk value higher than 1.5, so this variable didn't add points.
 
 ### Logistic Regression Model
 To compare the classification done with the relative risk per quartile/category, a logistic regression was implemented in Python. This algorithm considered the same variables as in the previous section, including the `debt_ratio` column. The training set was composed of 80% of the data and the test set included the 20% remaining.
