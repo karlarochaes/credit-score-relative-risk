@@ -45,7 +45,7 @@ The original tables contained 7199 null values in the `last_month_salary` column
 The outliers were handled capping the outliers to the maximum value using the IQR range:
 - `age`: any value higher than 97 was set to 97.
 - `last_month_salary`: any value higher than 15650 was set to 15650.
-- `more_90_days_overdue`: any value higher than 1 was set to 1.
+- `more_90_days_overdue`: any value higher than 15 was set to 15.
 - `using_lines_not_secured_personal_assets`: any value higher than 1.31 was set to 1.31.
 - `debt_ratio`: any value higher than 1 was set to 1.
 
@@ -109,7 +109,8 @@ Accordingly, the possible scores ranged between 0 and 9.
 
 ![image](https://github.com/karlarochaes/credit-score-relative-risk/assets/88100992/0b7e9ad5-94b3-4f55-86bc-ec28a628b7ee)
 
-With a cutoff point of 5 (any user with a score equal to or higher than 5 is classified as bad payer) corresponds to this confusion matrix.
+A cutoff point of 5 (any user with a score equal to or higher than 5 is classified as bad payer) resulted in the following confusion matrix:
+
 
 ### Logistic Regression Model
 
