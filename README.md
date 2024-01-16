@@ -46,8 +46,8 @@ The outliers were handled capping the outliers to the maximum value using the IQ
 - `age`: any value higher than 97 was set to 97.
 - `last_month_salary`: any value higher than 15650 was set to 15650.
 - `more_90_days_overdue`: any value higher than 15 was set to 15.
-- `using_lines_not_secured_personal_assets`: any value higher than 1.31 was set to 1.31.
-- `debt_ratio`: any value higher than 1 was set to 1.
+- `using_lines_not_secured_personal_assets`: any value higher than 1.31 was set to 1.31. Rounded to two decimals.
+- `debt_ratio`: any value higher than 1 was set to 1. Rounded to two decimals.
 
 Using this approach, the original 36000 rows were preserved.
 
