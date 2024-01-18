@@ -143,7 +143,7 @@ The final dashboard can be consulted in [this link](https://lookerstudio.google.
 ## Conclusions and Recommendations
 - The most important variables are those related to the financial information of the client (times overdue, using lines not secured with personal assets, and total loans). Accordingly, these should be the primary characteristics to identify probable defaulters.
 - A total score equal to or greater than 5 allows us to identify probable defaulter clients. Consequently, this would help reduce the risk of non-payment in the business.
-- The two models presented can be used complementarily. The relative risk model which specific group or range per variable is most likely to be bad payer, and the logistic regression model improves the classification made to accurately make a decision about credit requests.
+- The two models presented can be used complementarily. The relative risk model focuses on which specific group or range per variable is most likely to be bad payer, and the logistic regression model improves the classification made to accurately make a decision about credit requests.
 
 ## References
 Tenny S, Hoffman MR. Relative Risk. (Updated 2023 Mar 27). In: StatPearls. Treasure Island (FL): StatPearls Publishing; 2023 Jan. Available from: https://www.ncbi.nlm.nih.gov/books/NBK430824/
