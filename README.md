@@ -180,6 +180,7 @@ The confusion matrix for this model was configured as follows:
 |bad payer|10|135|
 
 Then, the performance metrics of the two models were compared:
+
 ![image](https://github.com/karlarochaes/credit-score-relative-risk/assets/88100992/d0de6a70-d835-4fca-90ed-107a8010af08)
 
 As can be seen, the logistic regression model performed better than the relative risk model in all metrics. Nevertheless, the difference was small for the accuracy and recall metrics.
@@ -198,4 +199,4 @@ The final dashboard can be consulted in [this link](https://lookerstudio.google.
 - The two models presented can be used complementarily. The relative risk model focuses on which specific group or range per variable is most likely to be bad payer, and the logistic regression model improves the classification made to accurately make a decision about credit requests.
 
 ## References
-Tenny S, Hoffman MR. Relative Risk. (Updated 2023 Mar 27). In: StatPearls. Treasure Island (FL): StatPearls Publishing; 2023 Jan. Available from: https://www.ncbi.nlm.nih.gov/books/NBK430824/
+Tenny, S. & Hoffman, M.R. Relative Risk. (2023). In: StatPearls. Treasure Island (FL): StatPearls Publishing. Available from: https://www.ncbi.nlm.nih.gov/books/NBK430824/
