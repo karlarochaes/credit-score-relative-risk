@@ -93,6 +93,14 @@ None of the `debt_ratio` quartiles had a relative risk value higher than 1.5, so
 ### Logistic Regression Model
 To compare the classification done with the relative risk per quartile/category, a logistic regression was implemented in Python. This algorithm considered the same variables as in the previous section, including the `debt_ratio` column. The training set was composed of 80% of the data and the test set included the 20% remaining.
 
+### Evaluation of Model Performance
+The two models were evaluated using the confusion matrix and the metrics related. The confusion matrix compares the real values to the predicted values in each category (good payers and bad payers)
+
+|real/predicted|good payer|bad payer|
+|--------|--------|--------|
+|good payer|True Negatives|False Positives|
+|bad payer|False Negatives|True Positives|
+
 ## Results
 ### Relative Risk Model
 To find the best cutoff point to classify bad payers and good payers, the model was evaluated using ML metrics and the confusion matrix.
@@ -111,13 +119,31 @@ Accordingly, the possible scores ranged between 0 and 9.
 
 A cutoff point of 5 (any user with a score equal to or higher than 5 is classified as bad payer) resulted in the following confusion matrix:
 
+|real/predicted|good payer|bad payer|
+|--------|--------|--------|
+|good payer|32844|2473|
+|bad payer|77|606|
 
 ### Logistic Regression Model
+The confusion matrix for this model:
+|real/predicted|good payer|bad payer|
+|--------|--------|--------|
+|good payer|6772|283|
+|bad payer|13|132|
+
+![image](https://github.com/karlarochaes/credit-score-relative-risk/assets/88100992/77d161cf-693a-4dfb-baa6-1a3c9eb79066)
+
 
 ## Visualization
 The final dashboard can be consulted in [this link](https://lookerstudio.google.com/reporting/29b10b35-77d0-4287-b4b4-f7400f0e3ff6).
 
+![image](https://github.com/karlarochaes/credit-score-relative-risk/assets/88100992/a4cb3370-4392-41c6-a38b-f071f6b4607a)
+
+
 ## Conclusions and Recommendations
+- The most important variables are those related to the financial information of the client (times overdue, using lines not secured with personal assets, and total loans). Accordingly, these should be the primary characteristics to identify probable defaulters.
+- A total score equal to or greater than 5 allows us to identify probable defaulter clients. Consequently, this would help reduce the risk of non-payment in the business.
+- The two models presented can be used complementarily. The relative risk model which specific group or range per variable is most likely to be bad payer, and the logistic regression model improves the classification made to accurately make a decision about credit requests.
 
 ## References
 Tenny S, Hoffman MR. Relative Risk. (Updated 2023 Mar 27). In: StatPearls. Treasure Island (FL): StatPearls Publishing; 2023 Jan. Available from: https://www.ncbi.nlm.nih.gov/books/NBK430824/
