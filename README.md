@@ -20,7 +20,7 @@ The "Super Caja" bank is facing an increasing amount of credit requests. In this
 ## Tools
 - SQL (Google BigQuery)
 - Python (Google Colab)
-- Looker Studio
+- [Looker Studio](https://lookerstudio.google.com/reporting/29b10b35-77d0-4287-b4b4-f7400f0e3ff6/page/TBDnD)
 
 ## Data Sourcing
 Four tables:
@@ -118,7 +118,7 @@ The relative risk values were transformed to binary values (dummy variables) usi
 None of the `debt_ratio` quartiles had a relative risk value higher than 1.5, so this variable didn't add any points.
 
 ### Logistic Regression Model
-To compare the classification done with the relative risk per quartile/category, a logistic regression was implemented in Python. This algorithm considered the same variables as in the previous section, including the `debt_ratio` column. The training set was composed of 80% of the data and the test set included the 20% remaining.
+To compare the classification done with the relative risk per quartile/category, a logistic regression was implemented in Python. This algorithm considered the same variables as in the previous section, including the `debt_ratio` column. The training set was composed of 80% of the data and the test set included the remaining 20%.
 
 ### Evaluation of Model Performance
 The two models were evaluated using the confusion matrix and four performance metrics related. The confusion matrix compares the real values to the predicted values in each category (good payers and bad payers):
